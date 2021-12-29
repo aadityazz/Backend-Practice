@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div class="box" id="heading">
+    <h1><%= KindOfDay%></h1>
+</div>
+
+<div class="box">
+    <ul>
+        <% for(let i=0; i<newListItems.length;i++){%>
+        <div class="item">
+            <input type="checkbox">
+            <p><%=newListItems[i]%>></p>
+        </div>
+        <%}%>
+    </ul>
+</div>
+
+<form class="item" action="/" method="post">
+    <input placeholder="New Item" type="text" name="newItem">
+    <button type="submit" name="button">+</button>
+</form>
+</body>
+</html>
